@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import "../App.css";
+import "../App.scss";
 
 export default function ExperienceTitle() {
-  let titles = ["Full-Stack Web Development", "Algorithm Design", "React.js"];
+  let titles = ["Full-Stack", "Algorithm Design", "React.js"];
 
   var expRef = useRef<HTMLHeadingElement>(null);
   var [expIndex, setExpIndex] = useState<number>(0);
