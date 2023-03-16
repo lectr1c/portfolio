@@ -1,5 +1,3 @@
-import { MutableRefObject, useEffect, useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.scss";
 import Hero from "./Pages/Hero";
 import Header from "./Components/Header";
@@ -9,6 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <div className="placeholder"></div>
     </div>
   );
 }

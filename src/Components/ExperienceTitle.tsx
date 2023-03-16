@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "../App.scss";
 
 export default function ExperienceTitle() {
-  let titles = ["Full-Stack", "Algorithm Design", "React.js"];
+  let titles = ["Full-Stack Development", "Algorithm Design", "React.js"];
 
   var expRef = useRef<HTMLHeadingElement>(null);
   var [expIndex, setExpIndex] = useState<number>(0);
@@ -16,7 +16,7 @@ export default function ExperienceTitle() {
 
   return (
     <>
-      <h2>Experience with </h2>
+      <h2>Experience in </h2>
       <h2 key={expIndex} className="fadeInText experienceTitle" ref={expRef}>
         {titles[expIndex]}
       </h2>

@@ -1,6 +1,10 @@
-$small: 300px;
-$medium: 600px;
+$small: 450px;
+$medium: 650px;
 $large: 900px;
+
+.hide {
+  display: none;
+}
 
 .Hero {
   height: 50vh;
@@ -8,6 +12,7 @@ $large: 900px;
   place-items: center;
   justify-content: space-between;
   position: relative;
+  color: #364f6b;
 
   img {
     animation: fadeInImage 1s normal linear;
@@ -17,10 +22,7 @@ $large: 900px;
     height: 300px;
   }
 
-  @media screen and (min-width: $large) {
-    white-space: nowrap;
-    overflow: auto;
-  }
+  white-space: nowrap;
 
   > div:first-child {
     width: 55%;
@@ -40,7 +42,6 @@ $large: 900px;
       width: 95vw !important;
 
       div:first-child {
-        filter: drop-shadow(0 0 30px rgb(61, 61, 61));
       }
 
       :last-child {
@@ -72,16 +73,32 @@ $large: 900px;
   position: relative;
   width: fit-content;
   display: inline;
+  @media screen and (max-width: $medium) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 1.5rem;
+  }
 }
 
 .Hero h2 {
   margin: 0;
   display: inline;
   font-size: 2rem;
+
+  @media screen and (max-width: $medium) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 1rem;
+  }
 }
 
 .experienceTitle {
   position: relative;
+  color: #364f6b;
 }
 
 .Hero .underline {
@@ -91,6 +108,11 @@ $large: 900px;
   position: absolute;
   margin-top: -14px;
   z-index: 1;
+
+  @media screen and (max-width: $medium) {
+    height: 6px;
+    margin-top: -8px;
+  }
 }
 
 .fadeInText {
@@ -107,8 +129,8 @@ $large: 900px;
     margin-left: 0px;
   }
 
-  50% {
-    color: rgba(0, 0, 0, 1);
+  70% {
+    color: #364f6b;
   }
 
   100% {
@@ -132,33 +154,101 @@ $large: 900px;
 .header {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 60px;
 }
 
 .header button {
+  color: #364f6b;
   margin-right: 40px;
   text-transform: capitalize;
   font-size: 18px;
-  filter: drop-shadow(0 0 0.65rem #364f6b89);
+
+  @media screen and (max-width: $medium) {
+    display: none;
+  }
+}
+
+.dropDownNavHidden {
+  display: none;
+}
+
+.dropDownNavHide {
+  display: none;
+}
+
+.dropDownNav {
+  animation: dropDown 0.3s normal linear;
+  width: 100vw;
+  height: fit-content;
+
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
+
+  button {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    color: #364f6b;
+  }
+
+  button:hover {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:active {
+    text-decoration: underline #fc5185 5px;
+  }
+}
+
+.dropdown {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: #f5f5f5;
+  z-index: 2;
+  width: 100vh;
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
 }
 
 .actionBtns {
   button {
     padding: 7px 14px;
     text-transform: uppercase;
-    background-color: #fc51846c;
+    background-color: #fc5184c0;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 125px;
+    width: fit-content;
     font-size: 18px;
     margin-top: 10px;
-    border: #fc5185 2px solid;
+    border: #fc5185 3px solid;
+
+    > svg {
+      margin-right: 10px;
+    }
+
+    color: #f5f5f5;
+
+    @media screen and (max-width: $small) {
+      font-size: 12px;
+    }
   }
 
   button:hover {
-    background-color: #fc5184b8;
+    background-color: #fc5184ed;
   }
 }
 
@@ -177,4 +267,140 @@ button {
 .header button:active {
   text-decoration: underline #fc5185 5px;
   cursor: pointer;
+}
+
+.hamburger {
+  left: 10px;
+  top: 4px;
+  display: none;
+  position: relative;
+  font-size: 30px;
+  height: 50px;
+  width: 35px;
+
+  z-index: 2;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $medium) {
+    display: flex;
+  }
+
+  div:nth-child(-n + 3) {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+  }
+
+  .line1 {
+    top: 14px;
+  }
+
+  .line1animate {
+    animation: hamburgerLine1 0.3s forwards linear;
+  }
+
+  .line1deanimate {
+    animation: hamburgerLine1Reverse 0.3s forwards linear;
+  }
+
+  .line2 {
+    top: 20px;
+  }
+
+  .line2animate {
+    animation: hamburgerLine2 0.3s forwards linear;
+  }
+
+  .line2deanimate {
+    animation: hamburgerLine2Reverse 0.3s forwards linear;
+  }
+
+  .line3 {
+    top: 26px;
+  }
+
+  .line3animate {
+    animation: hamburgerLine3 0.1s forwards linear;
+  }
+
+  .line3deanimate {
+    animation: hamburgerLine3Reverse 0.5s forwards linear;
+  }
+}
+
+@keyframes hamburgerLine1 {
+  from {
+    transform: rotate(0deg);
+    top: 14px;
+  }
+
+  to {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hamburgerLine2 {
+  from {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+}
+
+@keyframes hamburgerLine3 {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes hamburgerLine1Reverse {
+  from {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+    top: 14px;
+  }
+}
+
+@keyframes hamburgerLine2Reverse {
+  from {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+  to {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hamburgerLine3Reverse {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: black;
+  }
+}
+
+.placeholder {
+  height: 200vh;
 }
