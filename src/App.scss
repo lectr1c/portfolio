@@ -155,6 +155,18 @@ $large: 900px;
   display: flex;
   align-items: center;
   height: 60px;
+
+  button:hover {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:active {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:focus {
+    text-decoration: underline #fc5185 5px;
+  }
 }
 
 .header button {
@@ -197,6 +209,10 @@ $large: 900px;
   }
 
   button:active {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:focus {
     text-decoration: underline #fc5185 5px;
   }
 }
@@ -250,22 +266,20 @@ $large: 900px;
   button:hover {
     background-color: #fc5184ed;
   }
+
+  button:active {
+    background-color: #fc5184ed;
+  }
+
+  button:focus {
+    background-color: #fc5184ed;
+  }
 }
 
 button {
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
   border: 0;
-  cursor: pointer;
-}
-
-.header button:hover {
-  text-decoration: underline #fc5185 5px;
-  cursor: pointer;
-}
-
-.header button:active {
-  text-decoration: underline #fc5185 5px;
   cursor: pointer;
 }
 
