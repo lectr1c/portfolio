@@ -1,0 +1,225 @@
+$small: 450px;
+$medium: 650px;
+$large: 900px;
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  width: 80vw;
+  margin: auto;
+
+  button:hover {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:active {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:focus {
+    text-decoration: underline #fc5185 5px;
+  }
+}
+
+.header button {
+  color: #364f6b;
+  margin-right: 40px;
+  text-transform: capitalize;
+  font-size: 18px;
+
+  @media screen and (max-width: $medium) {
+    display: none;
+  }
+}
+
+.dropDownNav {
+  animation: dropDown 0.3s normal linear;
+  width: 100vw;
+  height: fit-content;
+
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
+
+  button {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    color: #364f6b;
+  }
+
+  button:hover {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:active {
+    text-decoration: underline #fc5185 5px;
+  }
+
+  button:focus {
+    text-decoration: underline #fc5185 5px;
+  }
+}
+
+.dropdown {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: #f5f5f5;
+  z-index: 2;
+  width: 100vh;
+}
+
+.dropDownNavHidden {
+  display: none;
+}
+
+.dropDownNavHide {
+  display: none;
+}
+
+.hamburger {
+  left: 10px;
+  top: 4px;
+  display: none;
+  position: relative;
+  font-size: 30px;
+  height: 50px;
+  width: 35px;
+
+  z-index: 2;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $medium) {
+    display: flex;
+  }
+
+  div:nth-child(-n + 3) {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+  }
+
+  .line1 {
+    top: 14px;
+  }
+
+  .line1animate {
+    animation: hamburgerLine1 0.3s forwards linear;
+  }
+
+  .line1deanimate {
+    animation: hamburgerLine1Reverse 0.3s forwards linear;
+  }
+
+  .line2 {
+    top: 20px;
+  }
+
+  .line2animate {
+    animation: hamburgerLine2 0.3s forwards linear;
+  }
+
+  .line2deanimate {
+    animation: hamburgerLine2Reverse 0.3s forwards linear;
+  }
+
+  .line3 {
+    top: 26px;
+  }
+
+  .line3animate {
+    animation: hamburgerLine3 0.1s forwards linear;
+  }
+
+  .line3deanimate {
+    animation: hamburgerLine3Reverse 0.5s forwards linear;
+  }
+}
+
+@keyframes hamburgerLine1 {
+  from {
+    transform: rotate(0deg);
+    top: 14px;
+  }
+
+  to {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hamburgerLine2 {
+  from {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+}
+
+@keyframes hamburgerLine3 {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes hamburgerLine1Reverse {
+  from {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+    top: 14px;
+  }
+}
+
+@keyframes hamburgerLine2Reverse {
+  from {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+  to {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hamburgerLine3Reverse {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: black;
+  }
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    margin-top: -50px;
+  }
+
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}

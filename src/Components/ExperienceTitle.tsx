@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "../App.scss";
+import "../Styles/Hero.scss";
 
 export default function ExperienceTitle() {
   let titles = ["Full-Stack Development", "Algorithm Design", "React.js"];

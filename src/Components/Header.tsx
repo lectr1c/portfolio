@@ -1,4 +1,4 @@
-import "../App.scss";
+import "../Styles/Navigation.scss";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useRef, useState } from "react";
 

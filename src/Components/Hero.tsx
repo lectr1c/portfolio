@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import "../App.scss";
-import ExperienceTitle from "../Components/ExperienceTitle";
+import "../Styles/Hero.scss";
+import ExperienceTitle from "./ExperienceTitle";
 import HeroPanel from "../assets/heroPanel.svg";
 import { BsCloudDownloadFill } from "react-icons/bs";
 
