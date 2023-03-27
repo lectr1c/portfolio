@@ -3,7 +3,7 @@ $medium: 650px;
 $large: 900px;
 
 .Hero {
-  height: 50vh;
+  height: 600px;
   margin-top: 50px;
   display: flex;
   place-items: center;
@@ -16,7 +16,7 @@ $large: 900px;
 
   img {
     animation: fadeInImage 1s normal linear;
-    max-height: 650px;
+    max-height: 600px;
 
     @media screen and (max-width: $large) {
       max-height: 500px;
@@ -36,7 +36,6 @@ $large: 900px;
 
   > div:last-child {
     width: 45%;
-    height: 300px;
 
     @media screen and (max-width: $large) {
       filter: opacity(0.4);
