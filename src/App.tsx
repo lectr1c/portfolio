@@ -10,8 +10,6 @@ function App() {
       <Hero />
       <Main />
       <div className="placeholder"></div>
-
-      <h1>PORTFOLIO DEVELOPMENT IN PROGRESS</h1>
     </div>
   );
 }
