@@ -9,8 +9,8 @@ export default function Hero() {
     <section className="Hero">
       <div>
         <div>
-          <h1>
-            Hello, I'm Razzaq<div className="underline"></div>
+          <h1 className="underline">
+            Hello, I'm Razzaq
           </h1>
         </div>
         <ExperienceTitle />

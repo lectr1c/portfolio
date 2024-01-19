@@ -103,16 +103,15 @@ $large: 900px;
 }
 
 .Hero .underline {
-  height: 12px;
-  width: 100%;
-  background-color: #3fc2c986;
-  position: absolute;
-  margin-top: -14px;
-  z-index: 1;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 12px;
+  text-underline-offset: -12px;
+  text-decoration-color: #3fc2c986;
 
   @media screen and (max-width: $medium) {
-    height: 6px;
-    margin-top: -8px;
+    text-decoration-thickness: 6px;
+    text-underline-offset: -6px;
   }
 }
 
