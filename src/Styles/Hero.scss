@@ -4,7 +4,6 @@ $large: 900px;
 
 .Hero {
   height: 600px;
-  margin-top: 50px;
   display: flex;
   place-items: center;
   justify-content: space-between;
@@ -17,6 +16,7 @@ $large: 900px;
   img {
     animation: fadeInImage 1s normal linear;
     max-height: 600px;
+
 
     @media screen and (max-width: $large) {
       max-height: 500px;
@@ -44,7 +44,7 @@ $large: 900px;
   > div {
     @media screen and (max-width: $large) {
       position: absolute;
-      width: 95vw !important;
+      width: 92vw !important;
 
       div:first-child {
       }
