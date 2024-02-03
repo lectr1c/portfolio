@@ -3,7 +3,7 @@ $medium: 650px;
 $large: 900px;
 
 .Hero {
-  height: 600px;
+  height: calc(80dvh);
   display: flex;
   place-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@ $large: 900px;
   }
 
   @media screen and (max-width: $medium) {
-    height: 300px;
+    height: calc(100dvh);
   }
 
   white-space: nowrap;
