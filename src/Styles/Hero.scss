@@ -3,19 +3,19 @@ $medium: 650px;
 $large: 900px;
 
 .Hero {
-  height: calc(80dvh);
+  height: 720px;
   display: flex;
   place-items: center;
   justify-content: space-between;
   position: relative;
   color: #364f6b;
 
-  width: 80vw;
-  margin: auto;
+  width: 80dvw;
+  padding: 0 10dvw;
 
   img {
     animation: fadeInImage 1s normal linear;
-    max-height: 600px;
+    max-height: 550px;
 
 
     @media screen and (max-width: $large) {
