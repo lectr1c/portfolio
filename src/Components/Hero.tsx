@@ -7,7 +7,7 @@ import { BsCloudDownloadFill } from "react-icons/bs";
 export default function Hero() {
   return (
     <section className="Hero">
-      <div>
+      <div className="HeroTextSection">
         <div>
           <h1 className="underline">
             Hello, I'm Razzaq

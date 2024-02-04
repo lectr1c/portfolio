@@ -8,8 +8,9 @@ $large: 900px;
   height: 60px;
   position: fixed;
   z-index: 100;
-  width: 80vw;
-  padding-inline: 10vw;
+  width: 60vw;
+  padding-inline: 20vw;
+  background-color: rgba(252, 81, 133, 0.15);
   backdrop-filter: blur(100px);
 
   @media screen and (max-width: $medium) {
@@ -75,9 +76,9 @@ $large: 900px;
   background-color: #f5f5f5;
   z-index: 101;
   width: 100vh;
-
+  background-color: rgba(252, 81, 133, 0.15);
   backdrop-filter: blur(100px);
-
+  -webkit-backdrop-filter: blur(100px);
 }
 
 .dropDownNavHidden {

@@ -2,40 +2,49 @@ $small: 450px;
 $medium: 650px;
 $large: 900px;
 
+.HeroTextSection {
+  width: 368.967px !important;
+
+  h2 {
+    overflow: hidden;
+  }
+}
+
 .Hero {
-  height: 720px;
+  height: 920px;
   display: flex;
   place-items: center;
   justify-content: space-between;
   position: relative;
   color: #364f6b;
 
-  width: 80dvw;
-  padding: 0 10dvw;
+  width: 60vw;
+  padding: 0 20vw;
+
 
   img {
     animation: fadeInImage 1s normal linear;
-    max-height: 550px;
+    width: clamp(280px, 40vw, 800px);
 
 
-    @media screen and (max-width: $large) {
-      max-height: 500px;
-    }
   }
 
   @media screen and (max-width: $medium) {
-    height: calc(100dvh);
+    height: calc(100vh);
   }
+
+  @media screen and (max-width: 1764px) {
+    justify-content: center;
+  }
+
 
   white-space: nowrap;
 
   > div:first-child {
-    width: 55%;
     z-index: 1;
   }
 
   > div:last-child {
-    width: 45%;
 
     @media screen and (max-width: $large) {
       filter: opacity(0.4);
@@ -44,7 +53,7 @@ $large: 900px;
   > div {
     @media screen and (max-width: $large) {
       position: absolute;
-      width: 92vw !important;
+      width: 80vw !important;
 
       div:first-child {
       }
@@ -100,6 +109,7 @@ $large: 900px;
 .experienceTitle {
   position: relative;
   color: #364f6b;
+  overflow: hidden;
 }
 
 .Hero .underline {
