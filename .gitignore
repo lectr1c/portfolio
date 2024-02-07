@@ -127,5 +127,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 .DS_Store
-dist/*
 .idea/workspace.xml
