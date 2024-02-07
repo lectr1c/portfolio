@@ -10,33 +10,46 @@ $large: 900px;
   z-index: 100;
   width: 60vw;
   padding-inline: 20vw;
-  background-color: rgba(252, 81, 133, 0.15);
+  background-color: rgba(63, 193, 201, 0.65);
   backdrop-filter: blur(100px);
+  border-bottom: white solid 2px;
 
   @media screen and (max-width: $medium) {
     display: none;
   }
 
   button:hover {
-    text-decoration: underline #fc5185 5px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0;
+    text-decoration-color: #fc5185;
   }
 
   button:active {
-    text-decoration: underline #fc5185 5px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0;
+    text-decoration-color: #fc5185;
   }
 
   button:focus {
-    text-decoration: underline #fc5185 5px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0;
+    text-decoration-color: #fc5185;
   }
 
 }
 
 .header button {
 
-  color: #364f6b;
+  color: #1c2a37;
   margin-right: 40px;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
 
 }
 
@@ -45,14 +58,10 @@ $large: 900px;
   width: 100vw;
   height: fit-content;
 
-  @media screen and (min-width: $medium) {
-    display: none;
-  }
-
   button {
     display: block;
     margin: 10px;
-    font-size: 18px;
+    font-size: 23px;
     color: #364f6b;
   }
 
@@ -76,9 +85,14 @@ $large: 900px;
   background-color: #f5f5f5;
   z-index: 101;
   width: 100vh;
-  background-color: rgba(252, 81, 133, 0.15);
+  background-color: rgba(63, 193, 201, 0.65);
+  border-bottom: white solid 2px;
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
+
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
 }
 
 .dropDownNavHidden {

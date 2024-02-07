@@ -24,9 +24,7 @@ $large: 900px;
 
   img {
     animation: fadeInImage 1s normal linear;
-    width: clamp(380px, 40vw, 800px);
-
-
+    width: clamp(320px, 40vw, 800px);
   }
 
   @media screen and (max-width: $medium) {
@@ -117,7 +115,7 @@ $large: 900px;
   text-decoration-skip-ink: none;
   text-decoration-thickness: 12px;
   text-underline-offset: -12px;
-  text-decoration-color: #3fc2c986;
+  text-decoration-color: rgba(252, 81, 133, 0.78);
 
   @media screen and (max-width: $medium) {
     text-decoration-thickness: 6px;
