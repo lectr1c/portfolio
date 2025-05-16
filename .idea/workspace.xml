@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9b09fb4-c9af-46b8-80a9-be2bb958a7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/RazzaqCV2025.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/assets/index-5b0fe6b4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/assets/index-dd80ba5c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -96,8 +94,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -120,7 +118,7 @@
       <workItem from="1706396281970" duration="4213000" />
       <workItem from="1706692039272" duration="309000" />
       <workItem from="1706692355910" duration="597000" />
-      <workItem from="1747431446221" duration="604000" />
+      <workItem from="1747431446221" duration="1240000" />
     </task>
     <servers />
   </component>
