@@ -15,9 +15,11 @@ export default function Hero() {
         </div>
         <ExperienceTitle />
         <div className="actionBtns">
-          <button>
-            <BsCloudDownloadFill className="icon" /> Get CV
-          </button>
+            <a href="/RazzaqCV2025.pdf" download>
+                <button>
+                    <BsCloudDownloadFill className="icon" /> Get CV
+                </button>
+            </a>
         </div>
       </div>
       <div>

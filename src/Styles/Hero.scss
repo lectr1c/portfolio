@@ -184,6 +184,11 @@ $large: 900px;
     }
   }
 
+  > a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   button:hover {
     background-color: #fc5184ed;
   }

@@ -7,7 +7,7 @@ export default function Main() {
     <AboutMe/>
     <div className="main">
       <div>
-        W.I.P. last updated 02/05/2024
+        W.I.P. last updated 2025-05-16
       </div>
     </div>
   </>)
