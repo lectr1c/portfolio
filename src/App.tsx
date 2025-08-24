@@ -1,16 +1,26 @@
 import "./Styles/index.scss";
-import Hero from "./Components/Hero";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./Components/Header";
-import Main from "./Components/Main";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Main />
-      <div className="placeholder"></div>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

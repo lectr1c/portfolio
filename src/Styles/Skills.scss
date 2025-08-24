@@ -1,0 +1,403 @@
+@import './variables.scss';
+
+.skills-section {
+  background: var(--bg-primary);
+  padding: $space-20 0;
+  
+  @media screen and (max-width: $large) {
+    padding: $space-16 0;
+  }
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-12 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $space-16;
+  
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: $font-weight-bold;
+    color: var(--text-primary);
+    margin: 0 0 $space-4 0;
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: $space-12;
+  margin-bottom: $space-16;
+  
+  @media screen and (max-width: $medium) {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+}
+
+.skill-category {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-xl;
+  padding: $space-8;
+  position: relative;
+  overflow: visible;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $primary-cyan, $accent-pink);
+    border-radius: $radius-xl $radius-xl 0 0;
+  }
+  
+  // Central hub design
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, $primary-cyan, $accent-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba($primary-cyan, 0.3);
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-6;
+    min-height: 300px;
+    
+    &::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.category-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin: 0 0 $space-6 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-lg;
+    margin-bottom: $space-4;
+  }
+}
+
+.floating-skills {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  
+  @media screen and (max-width: $medium) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.orbiting-skill {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-1;
+  padding: $space-2;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-lg;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all $transition-base;
+  z-index: 3;
+  width: 60px;
+  height: 80px;
+  
+  // Calculate position based on the orbit angle
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;  // Half of height
+  margin-left: -30px; // Half of width
+  
+  // Use CSS calc to position around circle
+  transform: 
+    rotate(var(--orbit-angle)) 
+    translateY(-140px) 
+    rotate(calc(-1 * var(--orbit-angle)));
+  
+  // Orbital animation - just rotate the angle
+  animation: spin 20s infinite linear;
+  
+  &:hover {
+    transform: 
+      rotate(var(--orbit-angle)) 
+      translateY(-140px) 
+      rotate(calc(-1 * var(--orbit-angle)))
+      scale(1.2);
+    box-shadow: 0 10px 30px rgba($primary-cyan, 0.3);
+    border-color: $primary-cyan;
+    z-index: 10;
+    animation-play-state: paused;
+  }
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-1;
+    width: 50px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -25px;
+    
+    transform: 
+      rotate(var(--orbit-angle)) 
+      translateY(-110px) 
+      rotate(calc(-1 * var(--orbit-angle)));
+    
+    &:hover {
+      transform: 
+        rotate(var(--orbit-angle)) 
+        translateY(-110px) 
+        rotate(calc(-1 * var(--orbit-angle)))
+        scale(1.15);
+    }
+  }
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+    transition: filter $transition-fast;
+  }
+  
+  @media screen and (max-width: $medium) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.orbiting-skill:hover .skill-icon img {
+  filter: drop-shadow(2px 2px 8px rgba($primary-cyan, 0.4));
+}
+
+.skill-name {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: var(--text-primary);
+  text-align: center;
+  white-space: nowrap;
+  
+  @media screen and (max-width: $medium) {
+    font-size: 9px;
+  }
+}
+
+// Skills Summary Section
+.skills-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-8;
+  margin-top: $space-16;
+  
+  @media screen and (max-width: $medium) {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+}
+
+.summary-item {
+  text-align: center;
+  padding: $space-6;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-xl;
+  transition: all $transition-base;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba($primary-cyan, 0.1), transparent);
+    transition: left 0.5s;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba($primary-cyan, 0.3);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-5;
+  }
+}
+
+.summary-icon {
+  font-size: 3rem;
+  margin-bottom: $space-4;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+  position: relative;
+  z-index: 2;
+  
+  @media screen and (max-width: $medium) {
+    font-size: 2.5rem;
+    margin-bottom: $space-3;
+  }
+}
+
+.summary-item h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin: 0 0 $space-3 0;
+  position: relative;
+  z-index: 2;
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-lg;
+  }
+}
+
+.summary-item p {
+  font-size: $font-size-base;
+  color: var(--text-secondary);
+  line-height: $line-height-relaxed;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-sm;
+  }
+}
+
+// Orbital Animation - simple rotation
+@keyframes spin {
+  from {
+    transform: 
+      rotate(calc(var(--orbit-angle) + 0deg)) 
+      translateY(-140px) 
+      rotate(calc(-1 * (var(--orbit-angle) + 0deg)));
+  }
+  to {
+    transform: 
+      rotate(calc(var(--orbit-angle) + 360deg)) 
+      translateY(-140px) 
+      rotate(calc(-1 * (var(--orbit-angle) + 360deg)));
+  }
+}
+
+// Mobile orbital animation
+@media screen and (max-width: $medium) {
+  @keyframes spin {
+    from {
+      transform: 
+        rotate(calc(var(--orbit-angle) + 0deg)) 
+        translateY(-110px) 
+        rotate(calc(-1 * (var(--orbit-angle) + 0deg)));
+    }
+    to {
+      transform: 
+        rotate(calc(var(--orbit-angle) + 360deg)) 
+        translateY(-110px) 
+        rotate(calc(-1 * (var(--orbit-angle) + 360deg)));
+    }
+  }
+}
+
+// Pause animations on category hover
+.skill-category:hover .orbiting-skill {
+  animation-play-state: paused;
+}
+
+// Staggered animation delays for more organic feel
+.orbiting-skill:nth-child(1) { animation-delay: 0s; }
+.orbiting-skill:nth-child(2) { animation-delay: -2s; }
+.orbiting-skill:nth-child(3) { animation-delay: -4s; }
+.orbiting-skill:nth-child(4) { animation-delay: -6s; }
+.orbiting-skill:nth-child(5) { animation-delay: -8s; }
+.orbiting-skill:nth-child(6) { animation-delay: -10s; }
+.orbiting-skill:nth-child(7) { animation-delay: -12s; }
+.orbiting-skill:nth-child(8) { animation-delay: -14s; }
+.orbiting-skill:nth-child(9) { animation-delay: -16s; }
+
+// Pulse effect for central hub
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba($primary-cyan, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba($primary-cyan, 0.6);
+  }
+}
+
+.skill-category::after {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+// Dark mode enhancements
+[data-theme="dark"] {
+  .orbiting-skill {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    
+    &:hover {
+      box-shadow: 0 10px 30px rgba($primary-cyan, 0.4);
+    }
+  }
+  
+  .skill-icon img {
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.3));
+  }
+  
+  .orbiting-skill:hover .skill-icon img {
+    filter: drop-shadow(2px 2px 8px rgba($primary-cyan, 0.5));
+  }
+  
+  .skill-category::after {
+    box-shadow: 0 0 25px rgba($primary-cyan, 0.4);
+  }
+}

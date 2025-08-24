@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9b09fb4-c9af-46b8-80a9-be2bb958a7b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/assets/index-5b0fe6b4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/index-dd80ba5c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.claude/agents/design-review.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.claude/commands/slash-commands.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context/design-principles.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context/style-guide.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/About.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Projects.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Skills.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/About.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Contact.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Projects.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/Skills.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Styles/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/ThemeContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,14 +37,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lectr1c&quot;
+  }
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lectr1c/portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;694491ac-4613-4a8b-9ccb-fc7688431403&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2bYe8YFOvlIyTzZwTr4AodEvqQD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,18 +78,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/Programming/portfolio/public",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/razzaq/WebstormProjects/portfolio",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "F:\\Programming\\portfolio\\node_modules\\typescript\\lib",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/razzaq/WebstormProjects/portfolio/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -57,11 +106,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="F:\Programming\portfolio\public" />
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -94,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -103,7 +153,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
       </set>
     </attachedChunks>
   </component>
@@ -119,6 +169,8 @@
       <workItem from="1706692039272" duration="309000" />
       <workItem from="1706692355910" duration="597000" />
       <workItem from="1747431446221" duration="1240000" />
+      <workItem from="1756038448169" duration="172000" />
+      <workItem from="1756038625889" duration="6175000" />
     </task>
     <servers />
   </component>

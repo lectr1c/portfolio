@@ -1,0 +1,294 @@
+@import './variables.scss';
+
+.about-section {
+  background: var(--bg-secondary);
+  padding: $space-20 0;
+  
+  @media screen and (max-width: $large) {
+    padding: $space-16 0;
+  }
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-12 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $space-16;
+  
+  h2 {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    color: var(--text-primary);
+    margin: 0 0 $space-4 0;
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-3xl;
+    }
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-20;
+  align-items: start;
+  
+  @media screen and (max-width: $xl) {
+    grid-template-columns: 1fr;
+    gap: $space-12;
+  }
+}
+
+.about-text {
+  max-width: none;
+  
+  @media screen and (max-width: $xl) {
+    order: 2;
+  }
+}
+
+.about-intro {
+  margin-bottom: $space-10;
+  
+  p {
+    font-size: $font-size-lg;
+    line-height: $line-height-relaxed;
+    color: var(--text-primary);
+    margin: 0;
+    
+    strong {
+      color: $primary-cyan;
+      font-weight: $font-weight-semibold;
+    }
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.about-details {
+  margin-bottom: $space-12;
+}
+
+.detail-item {
+  margin-bottom: $space-8;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  h3 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: var(--text-primary);
+    margin: 0 0 $space-3 0;
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-lg;
+    }
+  }
+  
+  p {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-6;
+  
+  @media screen and (max-width: $medium) {
+    gap: $space-4;
+  }
+}
+
+.highlight {
+  text-align: center;
+  padding: $space-6 $space-4;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-lg;
+  
+  @media screen and (max-width: $medium) {
+    padding: $space-4 $space-3;
+  }
+}
+
+.highlight-number {
+  display: block;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, $primary-cyan, $accent-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: $space-2;
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-2xl;
+  }
+}
+
+.highlight-label {
+  display: block;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  font-weight: $font-weight-medium;
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-xs;
+  }
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media screen and (max-width: $xl) {
+    order: 1;
+  }
+}
+
+.profile-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: $radius-xl;
+  padding: $space-8;
+  box-shadow: var(--shadow);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  
+  @media screen and (max-width: $medium) {
+    max-width: 280px;
+    padding: $space-6;
+  }
+}
+
+.profile-image-container {
+  position: relative;
+  margin-bottom: $space-6;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto $space-4;
+  position: relative;
+  
+  @media screen and (max-width: $medium) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $primary-cyan, $accent-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  
+  @media screen and (max-width: $medium) {
+    font-size: 2.5rem;
+  }
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+.profile-info {
+  h3 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: var(--text-primary);
+    margin: 0 0 $space-2 0;
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-xl;
+    }
+  }
+  
+  p {
+    font-size: $font-size-base;
+    color: var(--text-secondary);
+    margin: 0 0 $space-6 0;
+    
+    @media screen and (max-width: $medium) {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-2;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba($primary-cyan, 0.1);
+  color: $primary-cyan;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  border: 1px solid rgba($primary-cyan, 0.2);
+  
+  @media screen and (max-width: $medium) {
+    font-size: $font-size-xs;
+    padding: $space-1 $space-2;
+  }
+}
+
+// Animations
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

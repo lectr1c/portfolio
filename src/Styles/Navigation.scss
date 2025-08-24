@@ -1,249 +1,282 @@
-$small: 450px;
-$medium: 650px;
-$large: 900px;
+@import './variables.scss';
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-fixed;
+  background: var(--header-bg);
+  backdrop-filter: var(--header-backdrop);
+  -webkit-backdrop-filter: var(--header-backdrop);
+  border-bottom: 1px solid var(--border-color);
+  transition: all $transition-base;
+}
 
 .header {
   display: flex;
   align-items: center;
-  height: 60px;
-  position: fixed;
-  z-index: 100;
-  width: 60vw;
-  padding-inline: 20vw;
-  background-color: rgba(63, 193, 201, 0.65);
-  backdrop-filter: blur(100px);
-  border-bottom: white solid 2px;
+  justify-content: space-between;
+  height: $header-height;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $space-6;
 
-  @media screen and (max-width: $medium) {
-    display: none;
-  }
-
-  button:hover {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 0;
-    text-decoration-color: #fc5185;
-  }
-
-  button:active {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 0;
-    text-decoration-color: #fc5185;
-  }
-
-  button:focus {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 0;
-    text-decoration-color: #fc5185;
-  }
-
-}
-
-.header button {
-
-  color: #1c2a37;
-  margin-right: 40px;
-  text-transform: capitalize;
-  font-size: 20px;
-
-}
-
-.dropDownNav {
-  animation: dropDown 0.3s normal linear;
-  width: 100vw;
-  height: fit-content;
-
-  button {
-    display: block;
-    margin: 10px;
-    font-size: 23px;
-    color: #364f6b;
-  }
-
-  button:hover {
-    text-decoration: underline #fc5185 5px;
-  }
-
-  button:active {
-    text-decoration: underline #fc5185 5px;
-  }
-
-  button:focus {
-    text-decoration: underline #fc5185 5px;
-  }
-}
-
-.dropdown {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  background-color: #f5f5f5;
-  z-index: 101;
-  width: 100vh;
-  background-color: rgba(63, 193, 201, 0.65);
-  border-bottom: white solid 2px;
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
-
-  @media screen and (min-width: $medium) {
+  @media screen and (max-width: $large) {
     display: none;
   }
 }
 
-.dropDownNavHidden {
+.mobile-nav {
   display: none;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-height-mobile;
+  padding: 0 $space-4;
+
+  @media screen and (max-width: $large) {
+    display: flex;
+  }
 }
 
-.dropDownNavHide {
-  display: none;
+.nav-brand {
+  .brand-link {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: var(--text-primary);
+    text-decoration: none;
+    background: linear-gradient(135deg, $primary-cyan, $accent-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-cyan;
+      outline-offset: $space-1;
+      border-radius: $radius-sm;
+    }
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: $space-8;
+}
+
+.nav-link {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  padding: $space-2 $space-3;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: all $transition-fast;
+  position: relative;
+
+  &:hover {
+    color: var(--text-primary);
+    background-color: rgba($primary-cyan, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-cyan;
+    outline-offset: 2px;
+  }
+}
+
+.header-actions,
+.mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-full;
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: $primary-cyan;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-cyan;
+    outline-offset: 2px;
+  }
+
+  &.mobile {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.theme-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .hamburger {
-  left: 10px;
-  top: 4px;
-  display: none;
-  position: relative;
-  font-size: 30px;
-  height: 50px;
-  width: 35px;
-
-  z-index: 101;
-
-  cursor: pointer;
-
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: $z-modal;
+  gap: 0.25rem;
+  transition: all $transition-fast;
 
-  @media screen and (max-width: $medium) {
-    display: flex;
+  &:hover {
+    background-color: rgba(var(--text-primary), 0.1);
+    border-radius: $radius-md;
   }
 
-  div:nth-child(-n + 3) {
-    width: 20px;
+  &:focus-visible {
+    outline: 2px solid $primary-cyan;
+    outline-offset: 2px;
+    border-radius: $radius-md;
+  }
+
+  div {
+    width: 1.25rem;
     height: 2px;
-    background-color: black;
-    position: absolute;
+    background-color: var(--text-primary);
+    border-radius: 1px;
+    transition: all $transition-base $ease-in-out-cubic;
+    transform-origin: center;
   }
 
-  .line1 {
-    z-index: 101;
-    top: 14px;
-  }
+  &.active {
+    .line1 {
+      transform: translateY(0.375rem) rotate(45deg);
+    }
 
-  .line1animate {
-    animation: hamburgerLine1 0.3s forwards linear;
-  }
+    .line2 {
+      opacity: 0;
+      transform: scaleX(0);
+    }
 
-  .line1deanimate {
-    animation: hamburgerLine1Reverse 0.3s forwards linear;
-  }
-
-  .line2 {
-    top: 20px;
-  }
-
-  .line2animate {
-    animation: hamburgerLine2 0.3s forwards linear;
-  }
-
-  .line2deanimate {
-    animation: hamburgerLine2Reverse 0.3s forwards linear;
-  }
-
-  .line3 {
-    top: 26px;
-  }
-
-  .line3animate {
-    animation: hamburgerLine3 0.1s forwards linear;
-  }
-
-  .line3deanimate {
-    animation: hamburgerLine3Reverse 0.5s forwards linear;
+    .line3 {
+      transform: translateY(-0.375rem) rotate(-45deg);
+    }
   }
 }
 
-@keyframes hamburgerLine1 {
-  from {
-    transform: rotate(0deg);
-    top: 14px;
-  }
+.mobile-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 $radius-lg $radius-lg;
+  padding: $space-4;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+  transition: all $transition-base $ease-out-cubic;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-  to {
-    top: 20px;
-    transform: rotate(45deg);
-  }
-}
-
-@keyframes hamburgerLine2 {
-  from {
-    top: 20px;
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(-45deg);
-    top: 20px;
-  }
-}
-
-@keyframes hamburgerLine3 {
-  from {
-    background-color: black;
-  }
-
-  to {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes hamburgerLine1Reverse {
-  from {
-    top: 20px;
-    transform: rotate(45deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-    top: 14px;
-  }
-}
-
-@keyframes hamburgerLine2Reverse {
-  from {
-    transform: rotate(-45deg);
-    top: 20px;
-  }
-
-  to {
-    top: 20px;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes hamburgerLine3Reverse {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-  }
-
-  to {
-    background-color: black;
-  }
-}
-
-@keyframes dropDown {
-  from {
-    opacity: 0;
-    margin-top: -50px;
-  }
-
-  to {
-    margin-top: 0px;
+  &.active {
     opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @media screen and (min-width: $large) {
+    display: none;
   }
 }
+
+.mobile-nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  padding: $space-3 $space-4;
+  margin: $space-1 0;
+  border-radius: $radius-md;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-1rem);
+  transition: all $transition-fast;
+
+  .mobile-dropdown.active & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover {
+    background-color: rgba($primary-cyan, 0.1);
+    color: $primary-cyan;
+    transform: translateX(0.25rem);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-cyan;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// Enhanced animations for better mobile experience
+@media (prefers-reduced-motion: reduce) {
+  .hamburger,
+  .hamburger div,
+  .mobile-dropdown,
+  .mobile-nav-link {
+    transition: none;
+  }
+}
+
+// Mobile specific improvements
+@media screen and (max-width: $medium) {
+  .mobile-nav {
+    padding: 0 $space-3;
+  }
+  
+  .mobile-dropdown {
+    margin: 0 (-$space-3);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .mobile-nav-link {
+    font-size: $font-size-base;
+    padding: $space-3;
+  }
+}
+
