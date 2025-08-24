@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9b09fb4-c9af-46b8-80a9-be2bb958a7b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.claude/agents/design-review.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.claude/commands/slash-commands.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/design-principles.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/style-guide.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/About.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Contact.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Projects.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Skills.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/About.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/Contact.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/Projects.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/Skills.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Styles/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/ThemeContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +147,7 @@
       <workItem from="1706692355910" duration="597000" />
       <workItem from="1747431446221" duration="1240000" />
       <workItem from="1756038448169" duration="172000" />
-      <workItem from="1756038625889" duration="6175000" />
+      <workItem from="1756038625889" duration="7357000" />
     </task>
     <servers />
   </component>
